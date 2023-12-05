@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Signup</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
 
-    <body>
-        <div id="signup-form-div">
+<body>
+    <div id="signup-form-div">
 
-            <form>
-                <!--Write form input elements here-->
+        <form id="form" onsubmit="userData(event)">
+            <!--Write form input elements here-->
+            <input type="text" placeholder="Name" id="name">
+            <input type="number" placeholder="Contact No." id="contact">
+            <input type="email" placeholder="Email" id="mail">
+            <input type="password" placeholder="Password" id="pass">
+            <input type="submit" id="submit">
+        </form>
 
-            </form>
-
-        </div>
-    </body>
+    </div>
+</body>
 
 </html>
+<script src="scripts/signup.js"></script>
