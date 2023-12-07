@@ -16,7 +16,7 @@ function userData(event){
   if(name.value!="" && contact.value!="" && mail.value != "" && password.value != ""){
     let user = new UserData(name.value,contact.value,mail.value,password.value);
     console.log(user)
-    let dataArr = JSON.parse(localStorage.getItem("userData")) ||[];
+    let dataArr =JSON.parse(localStorage.getItem("userData"))||[];
     dataArr.push(user);
     localStorage.setItem("userData" ,JSON.stringify(dataArr));
     name.value=null,contact.value=null,mail.value=null,password.value=null;
