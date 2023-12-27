@@ -15,7 +15,7 @@ let id;
 function slideShow(){
    let contener = document.querySelector("#slideshow");
     id= setInterval(function(){
-        if(i==img_url.length){
+        if(i==img_url.length){                  
             i=0;
         }
         let img = document.createElement("img");
@@ -53,7 +53,7 @@ function dataFun(n,d,i,r){
     this.rating=r;
 }
 
-let arrObj=JSON.parse(localStorage.getItem("movieData"))||[];
+let arrObj=[];
 
 
 arrData.forEach(function(elem){
@@ -67,24 +67,18 @@ arrData.forEach(function(elem){
 });
 
 addMovies(arrObj);
-
-    console.log(arrObj)
-    function addMovies(movie){
-        
+    function addMovies(movie) {
         let movies = document.getElementById("movies");
-        
-        
-        movie.forEach(function(elem){
-            // movies.innerHTML=null;
-            let img= document.createElement("img");
-            img.src=elem.url;
-            movies.append(img);
-        });
-        // localStorage.setItem("movieData",JSON.stringify(null));
+    
+        if (movies.children.length === 0) { // Check if there are no child elements (images)
+            movie.forEach(function(elem) {
+                let img = document.createElement("img");
+                img.src = elem.url;
+                movies.append(img);
+            });
+        }
     }
-
-
-
+    
 function lowHigh(){
         let movies= JSON.parse(localStorage.getItem("movieData"));
         movies.sort(function(a,b){
@@ -105,6 +99,7 @@ function highLow(){
         movie.innerHTML=null;
         addMovies(movies);
 }
+
 
 
 

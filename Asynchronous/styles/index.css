@@ -1,4 +1,55 @@
+*{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0px;
+}
+#slideshow{
+    margin: auto;
+    width: 80%; /* Example width */
+    height: 400px; /* Example height */
+    /* overflow: hidden; Hide overflow to contain images within the container */
+    border: 1px solid #ccc; /* Example border */
+}
+#slideshow>img{
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: opacity 0.5s ease; /* Add a transition effect */
+}
+
+#movies{
+   
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    
+}
+#movies>img{
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+}
+
+#nav{
+    width: 90%;
+    background-color: transparent;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid;
+}
+#nav>button{
+    background-color: transparent;
+    border: 1px solid transparent;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
 #sort-buttons{
-    border: 3px solid red;
-    width: 500px;
+    width: 90%;
+    /* border: 3px solid red; */
+    margin: auto;
 }
