@@ -18,24 +18,6 @@ async function getData(){
 getData();
 
 
-// function append(data){
-//     let contener = document.getElementById("contener");
-//     data.forEach(function(el){
-//         let img = document.createElement("img");
-//         img.src= el.image;
-//         let p = document.createElement("p");
-//         p.innerText= el.title;
-//         let price  = document.createElement("p");
-//         price.innerText= el.price;
-//         let div = document.createElement("div");
-//         div.append(img,p,price);
-//         contener.append(div);
-//     });
-// }
-
-
-
-
 function append(data){
     let contener = document.getElementById("contener");
     data.forEach(function(elem){

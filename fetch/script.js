@@ -12,9 +12,6 @@ fetch(url)
         console.log(err);
     });
 
-
-
-
 function append(data){
     let contener = document.getElementById("contener");
     data.forEach(function(el){
